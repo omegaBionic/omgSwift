@@ -25,14 +25,32 @@ class ViewController: UIViewController {
         let sem = DispatchSemaphore.init(value: 0)
 
         // Get players on wargaming API
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in guard let data = data else { return }
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
             //print("The response is : ", String(data: data, encoding: .utf8)!)
             //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
+
+            do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                if let dictionary = jsonObject as? [String: Any] {
+                    if let results = dictionary["data"] as? [[String:Any]] {
+                        for result in results {
+                            let nickname = result["nickname"] as! String
+                            let account_id = result["account_id"] as! Int
+                            print (nickname )
+                            print (account_id)
+                        }
+                    }
+                }
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+                return
+            }
+
             responce = String(data: data, encoding: .utf8)!
 
             // Unlock semaphore
             defer { sem.signal() }
-
         }
         task.resume()
 
@@ -40,7 +58,7 @@ class ViewController: UIViewController {
         sem.wait()
 
         // Display result
-        print("[searchButton] responce: '" + responce + "'")
+        //print("[searchButton] responce: '" + responce + "'")
         self.displayText.text = responce
     }
 
