@@ -141,7 +141,7 @@
         <!--Achievements View Controller-->
         <scene sceneID="TCE-kX-Ohw">
             <objects>
-                <viewController id="QN5-kU-Pqz" userLabel="Achievements View Controller" sceneMemberID="viewController">
+                <viewController id="QN5-kU-Pqz" userLabel="Achievements View Controller" customClass="AchievementsViewController" customModule="omgSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o74-tK-LQi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eqc-Av-2vW"/>
+                    <connections>
+                        <outlet property="displayAchievements" destination="7DY-r7-zTo" id="NSQ-sF-qZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BiG-dm-Szm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +183,7 @@
         <!--Personal datas View Controller-->
         <scene sceneID="E6Z-Z0-VVg">
             <objects>
-                <viewController id="R3v-dx-qkd" userLabel="Personal datas View Controller" sceneMemberID="viewController">
+                <viewController id="R3v-dx-qkd" userLabel="Personal datas View Controller" customClass="PersonalDatasViewController" customModule="omgSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vc0-sD-aBL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,6 +214,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xd9-CM-Ha9"/>
+                    <connections>
+                        <outlet property="displayPersonalDatas" destination="Gaw-fL-Ccn" id="CR3-Wc-tMp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qop-3O-qdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +225,7 @@
         <!--Vehicles View Controller-->
         <scene sceneID="yKV-lI-OJn">
             <objects>
-                <viewController id="WcD-zd-jv4" userLabel="Vehicles View Controller" sceneMemberID="viewController">
+                <viewController id="WcD-zd-jv4" userLabel="Vehicles View Controller" customClass="VehiclesViewController" customModule="omgSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1oq-OV-Q9y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +256,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5qd-hz-JtU"/>
+                    <connections>
+                        <outlet property="displayVehicles" destination="bdS-NM-HG1" id="RAu-0a-6HG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGA-jI-JBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
