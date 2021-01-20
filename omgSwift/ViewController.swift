@@ -29,8 +29,8 @@ class ViewController: UIViewController {
             let sem = DispatchSemaphore.init(value: 0)
             
             // Create player and others returne vars
-            var player = Player()
-            var responce = ""
+            let player = Player()
+            //var responce = ""
 
             // Get players on wargaming API
             print("[searchButton] Get players on wargaming API")
@@ -46,8 +46,8 @@ class ViewController: UIViewController {
                             // Check search contain result(s)
                             if results.indices.contains(0) {
                                 // Save player found
-                                player.nickname = results[0]["nickname"] as! String
-                                player.account_id = results[0]["account_id"] as! Int
+                                player.nickname = results[0]["nickname"] as? String
+                                player.account_id = results[0]["account_id"] as? Int
                                 if player.nickname == searchBar {
                                     print("[searchButton] Player found: '\(searchBar)'")
                                     player.isFound = true
@@ -65,10 +65,10 @@ class ViewController: UIViewController {
                     return
                 }
 
-                responce = String(data: data, encoding: .utf8)!
+                //responce = String(data: data, encoding: .utf8)!
 
                 // Unlock semaphore
-                defer { sem.signal() }
+                do { sem.signal() }
             }
             task.resume()
 
