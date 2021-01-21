@@ -7,10 +7,15 @@
 
 import Foundation
 
-/** Take request
-    Return json with request
- */
 class Api {
+    private func requestFactory(url: String)-> String{
+        var retRequest = ""
+        
+        // If needed, not yet implement
+        
+        return retRequest
+    }
+    
     static func getPlayer(searchBar: String) -> Player{
         
         // Create player and others return vars
