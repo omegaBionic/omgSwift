@@ -155,7 +155,19 @@
       "unassigned" : true
     },
     {
+      "filename" : "48.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
       "filename" : "50.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "55.png",
       "idiom" : "universal",
       "scale" : "1x",
       "unassigned" : true
@@ -203,6 +215,12 @@
       "unassigned" : true
     },
     {
+      "filename" : "88.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
       "filename" : "114.png",
       "idiom" : "universal",
       "scale" : "1x",
@@ -233,7 +251,25 @@
       "unassigned" : true
     },
     {
+      "filename" : "172.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
       "filename" : "180.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "196.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "216.png",
       "idiom" : "universal",
       "scale" : "1x",
       "unassigned" : true
