@@ -41,6 +41,11 @@ extension String {
 
 class Utils {
     static func playerIsSearchable(player: String) -> Bool{
+        // if player empty
+        if (player == ""){
+            return false
+        }
+        
         //let isMatched = player.matches("[a-zA-Z0-9_-]*")
         let isMatched = player.matches("^[a-zA-Z0-9_-]*$")
         print("[Utils/isMatched] isMatched: '\(isMatched)'")
