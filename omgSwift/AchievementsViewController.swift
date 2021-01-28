@@ -12,7 +12,7 @@ class AchievementsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        displayAchievements.text = ""
     }
     
     @IBOutlet weak var displayAchievements: UILabel!
