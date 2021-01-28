@@ -22,14 +22,14 @@ class Api {
         let player = Player()
         
         // Concatenate URL
-        print("[searchButton] Concatenate URL")
-        let url = URL(string: "https://api.worldoftanks.eu/wot/account/list/?search=\(searchBar)&application_id=:)")!
+        print("[Api.getPlayer] Concatenate URL")
+        let url = URL(string: "https://api.worldoftanks.eu/wot/account/list/?search=\(searchBar)&application_id=f75bff43140282ba22c62f2f3226207d")!
         
         // Declare and lock semaphore for wait request
         let sem = DispatchSemaphore.init(value: 0)
         
         // Get players on wargaming API
-        print("[searchButton] Get players on wargaming API")
+        print("[Api.getPlayer] Get players on wargaming API")
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
             //print("The response is : ", String(data: data, encoding: .utf8)!)
@@ -45,11 +45,11 @@ class Api {
                             player.nickname = results[0]["nickname"] as? String
                             player.account_id = results[0]["account_id"] as? Int
                             if player.nickname == searchBar {
-                                print("[searchButton] Player found: '\(searchBar)'")
+                                print("[Api.getPlayer] Player found: '\(searchBar)'")
                                 player.isFound = true
                                 
                             } else {
-                                print("[searchButton] Player not found: '\(searchBar)'")
+                                print("[Api.getPlayer] Player not found: '\(searchBar)'")
                                 player.isFound = false
                             }
                         }
@@ -72,5 +72,61 @@ class Api {
         sem.wait()
         
         return player
+    }
+    
+    static func getPersonalDatas(player: Player) -> String{
+        
+        // Create player and others return vars
+        let player = Player()
+        
+        // Concatenate URL
+        print("[Api.getPersonalDatas] Concatenate URL")
+        let url = URL(string: "https://api.worldoftanks.eu/wot/account/info/?account_id=\(player.account_id)&application_id=f75bff43140282ba22c62f2f3226207d")!
+        
+        // Declare and lock semaphore for wait request
+        let sem = DispatchSemaphore.init(value: 0)
+        
+        // Get players on wargaming API
+        print("[Api.getPersonalDatas] Get players on wargaming API")
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            //print("The response is : ", String(data: data, encoding: .utf8)!)
+            //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
+
+            do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                print(jsonObject)
+                if let dictionary = jsonObject as? [String: Any] {
+                    if let results = dictionary["data"] as? [[String:Any]] {
+                        // Check search contain result(s)
+                        if results.indices.contains(0) {
+                            
+                            print("aaa")
+                            print(results)
+                            print("bbbb")
+                            
+                            // Save player found
+                            print(results[0][String(player.account_id!)] as? String)
+                            player.account_id = results[0]["account_id"] as? Int
+                        }
+                    }
+                    
+                }
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+                return
+            }
+
+            //responce = String(data: data, encoding: .utf8)!
+
+            // Unlock semaphore
+            do { sem.signal() }
+        }
+        task.resume()
+
+        // Wait unlock semaphore
+        sem.wait()
+        
+        return ""
     }
 }

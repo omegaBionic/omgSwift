@@ -16,38 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-2l-RM0">
-                                <rect key="frame" x="57" y="167.5" width="300" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="QTo-gh-dTb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldtankskicks_3142913b" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-r7-YnV">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="182.5"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHP-sl-iST">
-                                <rect key="frame" x="207" y="172.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="207" y="332" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bac-9J-qfW">
-                                <rect key="frame" x="32" y="7.5" width="50" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024" translatesAutoresizingMaskIntoConstraints="NO" id="bac-9J-qfW">
+                                <rect key="frame" x="32" y="7.5" width="50" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Rlb-E0-Xz9"/>
+                                    <constraint firstAttribute="height" constant="250" id="Rlb-E0-Xz9"/>
                                     <constraint firstAttribute="width" constant="50" id="itt-yB-sQO"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QTG-QT-Y4A">
-                                <rect key="frame" x="20" y="192.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="347" width="374" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjZ-eB-0DW">
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="350" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KILER_71" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjZ-eB-0DW">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <connections>
+                                            <action selector="mainText:" destination="hhO-ya-YrV" eventType="editingDidEnd" id="GkY-1y-MM9"/>
+                                            <segue destination="R3v-dx-qkd" kind="custom" id="q4s-Tv-zfW"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXH-oR-bZx">
                                         <rect key="frame" x="324" y="0.0" width="50" height="50"/>
@@ -67,28 +60,28 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UR3-Zr-cRK">
-                                <rect key="frame" x="20" y="262.5" width="374" height="150"/>
+                                <rect key="frame" x="20" y="417" width="374" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9E-Xh-197">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-Ty-uJb">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-Ty-uJb">
                                         <rect key="frame" x="0.0" y="20" width="374" height="30"/>
                                         <state key="normal" title="Player personal data"/>
                                         <connections>
                                             <segue destination="R3v-dx-qkd" kind="show" id="hC6-rh-xeH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3o-ZO6">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3o-ZO6">
                                         <rect key="frame" x="0.0" y="70" width="374" height="30"/>
                                         <state key="normal" title="Player vehicles"/>
                                         <connections>
                                             <segue destination="WcD-zd-jv4" kind="show" id="RXg-4b-EHO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQa-Qw-b9e">
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQa-Qw-b9e">
                                         <rect key="frame" x="0.0" y="120" width="374" height="30"/>
                                         <state key="normal" title="Player achievements"/>
                                         <connections>
@@ -96,45 +89,69 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstItem="z9E-Xh-197" firstAttribute="leading" secondItem="UR3-Zr-cRK" secondAttribute="leading" id="53k-LD-OCp"/>
                                     <constraint firstAttribute="trailing" secondItem="z9E-Xh-197" secondAttribute="trailing" id="KW7-Mi-QmF"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for your player!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-2l-RM0">
+                                <rect key="frame" x="57" y="307.5" width="300" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="QTo-gh-dTb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" image="logotip-world-of-tanks" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-r7-YnV">
+                                <rect key="frame" x="37" y="133" width="341" height="146"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UR3-Zr-cRK" secondAttribute="trailing" constant="20" id="1pd-QV-qzz"/>
-                            <constraint firstItem="fSg-r7-YnV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="54L-X8-IJT"/>
+                            <constraint firstItem="fSg-r7-YnV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="54L-X8-IJT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UR3-Zr-cRK" secondAttribute="bottom" constant="20" id="5Ci-Sy-k6v"/>
-                            <constraint firstItem="fSg-r7-YnV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hfr-fL-on4"/>
+                            <constraint firstItem="9Iz-2l-RM0" firstAttribute="top" secondItem="bac-9J-qfW" secondAttribute="bottom" constant="50" id="DRi-u1-yFi"/>
+                            <constraint firstItem="fSg-r7-YnV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="Hfr-fL-on4"/>
                             <constraint firstItem="UR3-Zr-cRK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PDi-08-C5p"/>
+                            <constraint firstItem="fSg-r7-YnV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="Pcz-PV-16e"/>
                             <constraint firstItem="UR3-Zr-cRK" firstAttribute="top" secondItem="QTG-QT-Y4A" secondAttribute="bottom" constant="20" id="Pfs-3D-Ko8"/>
                             <constraint firstItem="QTG-QT-Y4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rjr-z5-Nvx"/>
                             <constraint firstAttribute="centerY" secondItem="fSg-r7-YnV" secondAttribute="bottom" multiplier="3" constant="-100" id="VVC-rl-bQq"/>
-                            <constraint firstItem="QTG-QT-Y4A" firstAttribute="top" secondItem="PHP-sl-iST" secondAttribute="bottom" constant="20" id="X0S-rx-zHI"/>
+                            <constraint firstItem="QTG-QT-Y4A" firstAttribute="top" secondItem="PHP-sl-iST" secondAttribute="bottom" constant="15" id="X0S-rx-zHI"/>
                             <constraint firstItem="9Iz-2l-RM0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dh4-rh-zMN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QTG-QT-Y4A" secondAttribute="trailing" constant="20" id="fCm-Sg-do8"/>
-                            <constraint firstItem="9Iz-2l-RM0" firstAttribute="top" secondItem="bac-9J-qfW" secondAttribute="bottom" constant="10" id="hNu-y1-oKo"/>
                             <constraint firstItem="PHP-sl-iST" firstAttribute="top" secondItem="9Iz-2l-RM0" secondAttribute="bottom" constant="5" id="hnW-O0-vOX"/>
                             <constraint firstItem="PHP-sl-iST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kQY-Ns-bkN"/>
                             <constraint firstItem="bac-9J-qfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-150" id="t81-eF-R1x"/>
                             <constraint firstItem="bac-9J-qfW" firstAttribute="top" secondItem="fSg-r7-YnV" secondAttribute="bottom" constant="-175" id="x0B-Ra-XJC"/>
-                            <constraint firstAttribute="trailing" secondItem="fSg-r7-YnV" secondAttribute="trailing" id="yEv-1A-MYa"/>
+                            <constraint firstAttribute="trailing" secondItem="fSg-r7-YnV" secondAttribute="trailing" constant="60" id="yEv-1A-MYa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="54L-X8-IJT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="P9j-lb-XaL"/>
                     <connections>
                         <outlet property="cover" destination="fSg-r7-YnV" id="JWA-8Q-vwa"/>
                         <outlet property="displayText" destination="z9E-Xh-197" id="n2J-Nm-hnX"/>
-                        <outlet property="player" destination="yjZ-eB-0DW" id="VQ2-2r-lqT"/>
+                        <outlet property="playerAchievements" destination="oQa-Qw-b9e" id="S2h-iN-VXY"/>
+                        <outlet property="playerPersonalData" destination="eX6-Ty-uJb" id="uED-bg-MLO"/>
+                        <outlet property="playerSearchBar" destination="yjZ-eB-0DW" id="HG7-k0-d5o"/>
+                        <outlet property="playerVehicles" destination="xiE-3o-ZO6" id="5hs-5G-Sjo"/>
                         <outlet property="profil" destination="bac-9J-qfW" id="SnM-Pw-6Hs"/>
                         <outlet property="searchBar" destination="yjZ-eB-0DW" id="T2l-T0-qig"/>
                         <outlet property="searchButton" destination="CXH-oR-bZx" id="R92-v3-Ev5"/>
+                        <segue destination="R3v-dx-qkd" kind="show" id="lTF-w1-Nq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="hhO-ya-YrV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="791.304347826087" y="-2.6785714285714284"/>
         </scene>
@@ -283,15 +300,21 @@
             <point key="canvasLocation" x="-118.84057971014494" y="-2.6785714285714284"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hC6-rh-xeH"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="logo" width="900" height="900"/>
+        <image name="1024" width="1024" height="1024"/>
+        <image name="logotip-world-of-tanks" width="800" height="305"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="worldtankskicks_3142913b" width="1594" height="897"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,13 +9,20 @@ import UIKit
 
 class PersonalDatasViewController: UIViewController {
 
+    var player: Player = Player()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let personalDatas = Api.getPersonalDatas(player: player)
+        print("[PersonalDatasViewController] searchBar: '\(personalDatas)'")
+        
+        displayPersonalDatas.text = player.nickname
     }
 
     @IBOutlet weak var displayPersonalDatas: UILabel!
+    
+
     
     /*
     // MARK: - Navigation

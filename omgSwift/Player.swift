@@ -8,7 +8,7 @@
 import Foundation
 
 class Player {
-    var isFound = false
-    var nickname: String?
-    var account_id: Int?
+    public var isFound = false
+    public var nickname: String?
+    public var account_id: Int?
 }
