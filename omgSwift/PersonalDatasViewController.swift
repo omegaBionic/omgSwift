@@ -17,7 +17,28 @@ class PersonalDatasViewController: UIViewController {
         let personalDatas = Api.getPersonalDatas(player: player)
         print("[PersonalDatasViewController] searchBar: '\(personalDatas)'")
         
-        displayPersonalDatas.text = player.nickname
+        // Display
+        displayPersonalDatas.backgroundColor = .lightGray
+        
+        displayPersonalDatas.layer.masksToBounds = true
+        
+        displayPersonalDatas.layer.masksToBounds = true
+        
+        displayPersonalDatas.layer.cornerRadius = 10.0
+        
+        displayPersonalDatas.layer.borderWidth = 1
+        
+        displayPersonalDatas.layer.borderColor = UIColor.black.cgColor
+        
+        displayPersonalDatas.font = UIFont.systemFont(ofSize: 20.0)
+        
+        displayPersonalDatas.textColor = UIColor.black
+        
+        displayPersonalDatas.textAlignment = NSTextAlignment.left
+        
+        displayPersonalDatas.layer.shadowOpacity = 0.5
+        
+        displayPersonalDatas.text = personalDatas
     }
 
     @IBOutlet weak var displayPersonalDatas: UILabel!
