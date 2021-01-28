@@ -158,42 +158,28 @@
         <!--Achievements View Controller-->
         <scene sceneID="TCE-kX-Ohw">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BiG-dm-Szm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="QN5-kU-Pqz" userLabel="Achievements View Controller" customClass="AchievementsViewController" customModule="omgSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o74-tK-LQi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dBi-t2-UQj">
-                                <rect key="frame" x="20" y="108" width="374" height="20.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DY-r7-zTo">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="7DY-r7-zTo" firstAttribute="leading" secondItem="dBi-t2-UQj" secondAttribute="leading" id="Pup-ls-wtz"/>
-                                    <constraint firstAttribute="trailing" secondItem="7DY-r7-zTo" secondAttribute="trailing" id="jY7-d5-HQP"/>
-                                    <constraint firstItem="7DY-r7-zTo" firstAttribute="top" secondItem="dBi-t2-UQj" secondAttribute="top" id="nfk-X1-zPV"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19i-2c-mv8">
+                                <rect key="frame" x="-20" y="327" width="374" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qs3-J9-Ooq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Qs3-J9-Ooq" firstAttribute="trailing" secondItem="dBi-t2-UQj" secondAttribute="trailing" constant="20" id="9Rz-fp-JDy"/>
-                            <constraint firstItem="dBi-t2-UQj" firstAttribute="top" secondItem="Qs3-J9-Ooq" secondAttribute="top" constant="20" id="Vxt-ci-ycU"/>
-                            <constraint firstItem="dBi-t2-UQj" firstAttribute="leading" secondItem="Qs3-J9-Ooq" secondAttribute="leading" constant="20" id="k8a-9a-XMw"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eqc-Av-2vW"/>
                     <connections>
-                        <outlet property="displayAchievements" destination="7DY-r7-zTo" id="NSQ-sF-qZv"/>
+                        <outlet property="DisplayAchievements" destination="o74-tK-LQi" id="MOf-eY-XfP"/>
+                        <outlet property="displayAchivements" destination="19i-2c-mv8" id="WDH-ZM-ZUE"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BiG-dm-Szm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1421.7391304347827" y="-3.3482142857142856"/>
         </scene>
@@ -208,7 +194,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B1L-lI-wRl">
                                 <rect key="frame" x="20" y="108" width="374" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display personal datas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaw-fL-Ccn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display personal datas" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaw-fL-Ccn">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! PersonalDatasViewController
         destinationVC.player = player
-        
     }
     
     
