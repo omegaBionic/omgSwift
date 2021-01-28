@@ -74,7 +74,10 @@ class Api {
         return player
     }
     
-    static func getPersonalDatas(player: Player) -> String{
+    static func getPersonalDatas(player: Player) -> [Data]{
+        
+        // Constants and variables
+        var dataRet = [Data]()
         
         // Debug
         print("[Api.getPersonalDatas] player.isFound: '\(player.isFound)'")
@@ -94,27 +97,66 @@ class Api {
         var ret = ""
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
+            // Debug
             //print("The response is : ", String(data: data, encoding: .utf8)!)
             //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
-
+            
+            // Parse datas without object :)
             do {
-                let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-                //print(jsonObject)
-                if let dictionary = jsonObject as? [String: Any] {
-                    ret = "\(dictionary)"
-                    if let results = dictionary["data"] as? [[String:Any]] {
-                        // Check search contain result(s)
-                        if results.indices.contains(0) {
-                            // if we split, use ret
-                            
+                            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                            if let dictionaryGlobal = jsonObject as? [String: Any] {
+                                if let dictionaryPlayer = dictionaryGlobal["data"] as? [String:Any]{
+                                    
+                                    let playerId = "\(player.account_id!)"
+                                    print("[Api.getPersonalDatas] Get: '\(playerId)'")
+                                    
+                                    // Parse main values
+                                    if let dictionaryValues = dictionaryPlayer[playerId] as? [String:Any]{
+                                        for (key, value) in dictionaryValues {
+                                            let strKey = "\(key)"
+                                            let strValue = "\(value)"
+                                            
+                                            let tmpData = Data(key:strKey, value: strValue)
+                                            dataRet.append(tmpData)
+                                            
+                                            // Debug
+                                            print("[Api.getPersonalDatas] strKey: '\(strKey)'")
+                                            print("[Api.getPersonalDatas] strValue: '\(strValue)'")
+                                        }
+                                        
+                                        
+                                        // Parse statistics values
+                                        if let dictionaryValuesStats = dictionaryValues["statistics"] as? [String:Any]{
+                                            // Parse clan stats
+                                            if let dictionaryClan = dictionaryValuesStats["clan"] as? [String:Any]{
+                                                for (key, value) in dictionaryClan {
+                                                    let strKey = "\(key)"
+                                                    let strValue = "\(value)"
+                                                    
+                                                    let tmpData = Data(key:strKey, value: strValue)
+                                                    dataRet.append(tmpData)
+                                                }
+                                            }
+                                            
+                                            // Parse all player stats
+                                            if let dictionaryAllPlayer = dictionaryValuesStats["player"] as? [String:Any]{
+                                                for (key, value) in dictionaryAllPlayer {
+                                                    let strKey = "\(key)"
+                                                    let strValue = "\(value)"
+                                                    
+                                                    let tmpData = Data(key:strKey, value: strValue)
+                                                    dataRet.append(tmpData)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        } catch {
+                            print("JSON error: \(error.localizedDescription)")
+                            return
                         }
-                    }
-                    
-                }
-            } catch {
-                print("JSON error: \(error.localizedDescription)")
-                return
-            }
+
 
             //responce = String(data: data, encoding: .utf8)!
 
@@ -126,7 +168,7 @@ class Api {
         // Wait unlock semaphore
         sem.wait()
         
-        return ret
+        return dataRet
     }
     
     static func getAchievementsDatas(player: Player) -> String{

@@ -7,52 +7,44 @@
 
 import UIKit
 
-class PersonalDatasViewController: UIViewController {
+class PersonalDatasViewController: UIViewController, UITableViewDataSource {
 
+    // Define variables and constants
     var player: Player = Player()
+    var data = [Data]()
+    let identifier = "personalDatasCell"
     
+    @IBOutlet weak var personalDatasTableView: UITableView!
+    
+    
+    // Init
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let personalDatas = Api.getPersonalDatas(player: player)
-        print("[PersonalDatasViewController] searchBar: '\(personalDatas)'")
+        data = Api.getPersonalDatas(player: player)
+        print("[PersonalDatasViewController] data: '\(data)'")
         
-        // Display
-        displayPersonalDatas.backgroundColor = .lightGray
+
         
-        displayPersonalDatas.layer.masksToBounds = true
+        personalDatasTableView.dataSource = self
         
-        displayPersonalDatas.layer.masksToBounds = true
-        
-        displayPersonalDatas.layer.cornerRadius = 10.0
-        
-        displayPersonalDatas.layer.borderWidth = 1
-        
-        displayPersonalDatas.layer.borderColor = UIColor.black.cgColor
-        
-        displayPersonalDatas.font = UIFont.systemFont(ofSize: 20.0)
-        
-        displayPersonalDatas.textColor = UIColor.black
-        
-        displayPersonalDatas.textAlignment = NSTextAlignment.left
-        
-        displayPersonalDatas.layer.shadowOpacity = 0.5
-        
-        displayPersonalDatas.text = personalDatas
     }
-
-    @IBOutlet weak var displayPersonalDatas: UILabel!
     
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // tableView for cell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! personalDatasTableViewCell
+        let row = indexPath.row
+        
+        cell.key.textColor = UIColor.gray
+        cell.value.textColor = UIColor.lightGray
+        
+        cell.key.text = data[row].key
+        cell.value.text = data[row].value
+        
+        return cell
+    }
 }

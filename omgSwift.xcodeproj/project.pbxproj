@@ -19,6 +19,8 @@
 		BB17098025B83F2B00561BBC /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17097F25B83F2B00561BBC /* AchievementsViewController.swift */; };
 		BB17098325B83F4D00561BBC /* PersonalDatasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17098225B83F4D00561BBC /* PersonalDatasViewController.swift */; };
 		BB17098625B83F6000561BBC /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17098525B83F6000561BBC /* VehiclesViewController.swift */; };
+		BB748FEC25C9803300F2CC17 /* personalDatasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB748FEB25C9803300F2CC17 /* personalDatasTableViewCell.swift */; };
+		BB748FEF25C980A400F2CC17 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB748FEE25C980A400F2CC17 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BB17097F25B83F2B00561BBC /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		BB17098225B83F4D00561BBC /* PersonalDatasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDatasViewController.swift; sourceTree = "<group>"; };
 		BB17098525B83F6000561BBC /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		BB748FEB25C9803300F2CC17 /* personalDatasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalDatasTableViewCell.swift; sourceTree = "<group>"; };
+		BB748FEE25C980A400F2CC17 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				BB17097C25B8220400561BBC /* Utils.swift */,
 				40F85D672562B2AD008BC937 /* Main.storyboard */,
 				BB17098225B83F4D00561BBC /* PersonalDatasViewController.swift */,
+				BB748FEE25C980A400F2CC17 /* Data.swift */,
+				BB748FEB25C9803300F2CC17 /* personalDatasTableViewCell.swift */,
 				BB17098525B83F6000561BBC /* VehiclesViewController.swift */,
 				BB17097F25B83F2B00561BBC /* AchievementsViewController.swift */,
 				40F85D6A2562B2AD008BC937 /* Assets.xcassets */,
@@ -159,6 +165,8 @@
 				BB17098625B83F6000561BBC /* VehiclesViewController.swift in Sources */,
 				BB17097D25B8220400561BBC /* Utils.swift in Sources */,
 				BB17097A25B817E500561BBC /* Player.swift in Sources */,
+				BB748FEF25C980A400F2CC17 /* Data.swift in Sources */,
+				BB748FEC25C9803300F2CC17 /* personalDatasTableViewCell.swift in Sources */,
 				40F85D662562B2AD008BC937 /* ViewController.swift in Sources */,
 				40F85D622562B2AD008BC937 /* AppDelegate.swift in Sources */,
 				BB17098325B83F4D00561BBC /* PersonalDatasViewController.swift in Sources */,
