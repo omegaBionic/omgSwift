@@ -1,3 +1,10 @@
+//
+//  AppDelegate.swift
+//  omgWeather2
+//
+//  Created by Julien BOULLY on 02/02/2021.
+//
+
 import UIKit
 
 @main

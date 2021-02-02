@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="omgWeather2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Météo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmh-VA-fQO">
+                                <rect key="frame" x="160.5" y="64" width="93" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCG-Wa-xo8">
+                                <rect key="frame" x="20" y="64" width="75" height="30"/>
+                                <state key="normal" title="Mise à jour"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-18-SEG">
+                                <rect key="frame" x="346" y="64" width="48" height="30"/>
+                                <state key="normal" title="Tri ville"/>
+                                <connections>
+                                    <action selector="sortTemperature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNq-Np-V44"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Alj-vI-OIC">
+                                <rect key="frame" x="20" y="114" width="374" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meteoCell" rowHeight="122" id="TVg-ZZ-iTP" customClass="MeteoTableViewCell" customModule="omgWeather2">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TVg-ZZ-iTP" id="sOr-XE-Jzi">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berlin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-bi-zQI">
+                                                    <rect key="frame" x="40" y="31" width="54" height="20"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xb-Uw-L2R">
+                                                    <rect key="frame" x="241.5" y="38.5" width="92.5" height="45.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allemagne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-FJ-4n0">
+                                                    <rect key="frame" x="40" y="71" width="72" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4xb-Uw-L2R" secondAttribute="trailing" constant="20" id="5ea-hU-XYH"/>
+                                                <constraint firstItem="Me9-FJ-4n0" firstAttribute="top" secondItem="eAd-bi-zQI" secondAttribute="bottom" constant="20" id="8EM-av-fty"/>
+                                                <constraint firstItem="4xb-Uw-L2R" firstAttribute="centerY" secondItem="sOr-XE-Jzi" secondAttribute="centerY" id="ax4-R4-1Yt"/>
+                                                <constraint firstItem="Me9-FJ-4n0" firstAttribute="leading" secondItem="sOr-XE-Jzi" secondAttribute="leadingMargin" constant="20" id="dGE-XW-MQD"/>
+                                                <constraint firstItem="eAd-bi-zQI" firstAttribute="leading" secondItem="sOr-XE-Jzi" secondAttribute="leadingMargin" constant="20" id="hEU-Xo-bto"/>
+                                                <constraint firstItem="eAd-bi-zQI" firstAttribute="top" secondItem="sOr-XE-Jzi" secondAttribute="topMargin" constant="20" id="l48-mX-hqn"/>
+                                                <constraint firstItem="eAd-bi-zQI" firstAttribute="centerY" secondItem="sOr-XE-Jzi" secondAttribute="centerY" constant="-20" id="r3d-Hj-MYK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pays" destination="Me9-FJ-4n0" id="SJv-sN-Nzw"/>
+                                            <outlet property="temperature" destination="4xb-Uw-L2R" id="kP5-t0-Fct"/>
+                                            <outlet property="ville" destination="eAd-bi-zQI" id="KIc-6N-erh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zmh-VA-fQO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Gue-en-nKO"/>
+                            <constraint firstItem="2o0-18-SEG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HHg-ln-UBg"/>
+                            <constraint firstItem="Alj-vI-OIC" firstAttribute="top" secondItem="TCG-Wa-xo8" secondAttribute="bottom" constant="20" id="Isj-FI-wqy"/>
+                            <constraint firstItem="Zmh-VA-fQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MuY-0T-2fP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2o0-18-SEG" secondAttribute="trailing" constant="20" id="NdR-k8-g4z"/>
+                            <constraint firstItem="Alj-vI-OIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q7l-BJ-B1K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Alj-vI-OIC" secondAttribute="bottom" constant="20" id="VrB-Sd-a3b"/>
+                            <constraint firstItem="TCG-Wa-xo8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gsp-V8-SR7"/>
+                            <constraint firstItem="TCG-Wa-xo8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="h5G-py-Og8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Alj-vI-OIC" secondAttribute="trailing" constant="20" id="iky-aR-jzq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="meteoTableView" destination="Alj-vI-OIC" id="5FJ-JP-d3k"/>
+                        <outlet property="triVille" destination="2o0-18-SEG" id="72G-ab-qzn"/>
+                        <outlet property="update" destination="TCG-Wa-xo8" id="fpl-Se-YQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
